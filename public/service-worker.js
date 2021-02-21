@@ -13,7 +13,7 @@ const FILES_TO_CACHE = [
   ];
 
 //install cache
-  self.addEventListener("install", function (evt) {
+self.addEventListener("install", function (evt) {
     evt.waitUntil(
       caches.open(CACHE_NAME).then(cache => {
         console.log("Your files were pre-cached successfully!");
@@ -22,7 +22,7 @@ const FILES_TO_CACHE = [
     );
   
     self.skipWaiting();
-  });
+});
 
   //activate cache
   self.addEventListener("activate", function (evt) {
